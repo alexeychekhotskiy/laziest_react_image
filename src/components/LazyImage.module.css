@@ -1,0 +1,42 @@
+.placeholder {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: pulsing 1.5s infinite;
+    background-color: #fff;
+}
+
+@keyframes pulsing {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.placeholder img {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.placeholder.finished::before {
+    animation: none;
+    content: none;
+}
+
+.placeholder.finished img {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
