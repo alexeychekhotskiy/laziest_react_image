@@ -1,7 +1,7 @@
 {
     "name": "laziest-react-image",
     "private": false,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -10,12 +10,11 @@
         "preview": "vite preview"
     },
     "main": "./dist/react-lazy-image.umd.js",
+    "types": "./dist/index.d.ts",
     "module": "./dist/react-lazy-image.es.js",
-    "exports": {
-        ".": {
-            "import": "./dist/react-lazy-image.es.js",
-            "require": "./dist/react-lazy-image.umd.js"
-        }
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexeychekhotskiy/laziest_react_image.git"
     },
     "dependencies": {
         "react": "^18.2.0",
@@ -33,7 +32,8 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.3",
         "typescript": "^5.0.2",
-        "vite": "^4.4.5"
+        "vite": "^4.4.5",
+        "vite-plugin-dts": "^3.5.3"
     },
     "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
     "keywords": [
