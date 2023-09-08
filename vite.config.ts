@@ -10,14 +10,10 @@ export default defineConfig({
             entry: path.resolve("src", "index.ts"),
             name: "react-lazy-image",
             fileName: (format) => `react-lazy-image.${format}.js`,
+            formats: ["es"],
         },
         rollupOptions: {
-            external: ["react", "react-dom"],
-            output: {
-                globals: {
-                    react: "React",
-                },
-            },
+            external: ["react"],
         },
     },
     plugins: [react(), cssInjectedByJsPlugin(), dts()],
